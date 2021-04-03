@@ -5,21 +5,21 @@ This is a toy project. It is created to experiment with Dagger/Hilt and Gradle.
 
 ## Gradle Modules
 
-Root project 'MultimoduleHiltKotlinExample'
-+--- Project ':app'
-|    +--- Project ':app:common_resources'
-|    +--- Project ':app:largetests'
-|    +--- Project ':app:moduleA' - a library module
-|    +--- Project ':app:moduleB' - a library module
-|    +--- Project ':app:moduleC'
-|    \--- Project ':app:sampleapp' - the main module
-+--- Project ':lintchecks'
-\--- Project ':mytestapplication' - is another application project created to experiment with moving androidTests there.
+    Root project 'MultimoduleHiltKotlinExample'
+    +--- Project ':app'
+    |    +--- Project ':app:common_resources'
+    |    +--- Project ':app:largetests'
+    |    +--- Project ':app:moduleA' - a library module
+    |    +--- Project ':app:moduleB' - a library module
+    |    +--- Project ':app:moduleC'
+    |    \--- Project ':app:sampleapp' - the main module
+    +--- Project ':lintchecks'
+    \--- Project ':mytestapplication' - is another application project created to experiment with moving androidTests there.
 
 Note, for the demo purposes, the project has multiple flavors and build types:
 
-commonProductFlavors: basic, premium
-commonBuildTypes: debug, beta, release
+- commonProductFlavors: basic, premium
+- commonBuildTypes: debug, beta, release
 
 ## Android Espresso Tests
 
@@ -47,6 +47,7 @@ However, when the flag is on, the lint run fails due to https://github.com/googl
 
 Note: 
 The "./gradlew build" runs lint. That is blocked for now due to the issue mentioned above.
+A workaround is to run assemble first.
  
 ## How to Run Unit Tests
 
