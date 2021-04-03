@@ -1,0 +1,9 @@
+include ':app:moduleC'
+include ':app:common_resources'
+include ':lintchecks'
+include ':app:moduleB'
+include ':mytestapplication'
+include ':app:largetests'
+include ':app:moduleA'
+include ':app:sampleapp'
+rootProject.name = "MultimoduleHiltKotlinExample"

@@ -1,0 +1,55 @@
+plugins {
+    id 'com.android.library'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'dagger.hilt.android.plugin'
+}
+
+android {
+    compileSdkVersion rootProject.ext.compileSdkVersion
+    buildToolsVersion rootProject.ext.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.minSdkVersion
+        targetSdkVersion rootProject.ext.targetSdkVersion
+        versionCode rootProject.ext.versionCode
+        versionName rootProject.ext.versionName
+
+        multiDexEnabled true
+
+        testInstrumentationRunner "com.example.largetests.CustomTestRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+    lintOptions {
+        checkReleaseBuilds false
+    }
+}
+
+apply from: "$rootDir/gradle/android-hilt.gradle"
+apply from: "$rootDir/gradle/android-test.gradle"
+apply from: "$rootDir/gradle/android-lib.gradle"
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation 'androidx.core:core-ktx:1.3.2'
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation 'com.google.android.material:material:1.3.0'
+
+    // this module provides a test runner. Therefore, we include test libraries.
+    implementation 'androidx.test:runner:1.3.0'
+    implementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+}

@@ -1,0 +1,9 @@
+android {
+    flavorDimensions rootProject.ext.commonFlavorDimensions
+    productFlavors rootProject.ext.commonProductFlavors
+    buildTypes rootProject.ext.commonBuildTypes
+}
+
+dependencies {
+    implementation "androidx.multidex:multidex:$multidex_version"
+}

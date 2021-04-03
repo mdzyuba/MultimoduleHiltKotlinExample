@@ -1,0 +1,24 @@
+<resources>
+    <string name="title_activity_module_b_main">ModuleBMainActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="order_confirmation">Order Confirmation</string>
+    <string name="edit">Edit</string>
+    <string name="home">Home</string>
+    <string name="a_floating_action_button">A floating action button</string>
+    <string name="module_b">Module B</string>
+    <string name="available">Available:</string>
+    <string name="yes">yes</string>
+    <string name="no">no</string>
+
+    <string name="permission_storage_v30a">To view statuses, allow WhatsApp access to your
+        device\'s photos, media, and files. Tap Settings > Permissions, and turn \"Files and media\" on.
+    </string>
+
+</resources>

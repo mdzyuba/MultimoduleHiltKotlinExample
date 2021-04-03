@@ -1,0 +1,41 @@
+
+android {
+    lintOptions {
+        // Required by Hilt
+        checkReleaseBuilds false
+    }
+}
+
+hilt {
+    // This is only required for Android Gradle Plugin version lower than 4.2. (https://developer.android.com/training/dependency-injection/hilt-testing)
+    enableTransformForLocalTests = true
+
+    // Note: Lint breaks when the flag is on. Please see https://github.com/google/dagger/issues/2378.
+    enableExperimentalClasspathAggregation = true
+
+    // Note: this approach does not work for cases where we want to build
+    // individual modules. It works if we build the whole project.
+    //    enableExperimentalClasspathAggregation =
+            // rootProject.ext.enableExperimentalClasspathAggregation
+    // This will return: cannot access OkHttpClient
+    // enableExperimentalClasspathAggregation = false
+}
+
+dependencies {
+    // Hilt
+    implementation "com.google.dagger:hilt-android:$hilt_version"
+    kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    // Hilt test
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+    testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kaptTest "com.google.dagger:hilt-android-compiler:$hilt_version"
+
+//    implementation (name: "artifact", ext: "aar")
+//    kapt (name: "artifact", ext: "aar")
+//    androidTestImplementation (name: "artifact", ext: "aar")
+//    kaptAndroidTest (name: "artifact", ext: "aar")
+}
+
