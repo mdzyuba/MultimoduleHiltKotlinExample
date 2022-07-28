@@ -13,9 +13,9 @@ dependencyResolutionManagement {
     }
 }
 include ':app:moduleA'
-include ':app:moduleB'
 include ':app:sampleapp'
 include ':libraries:common_resources'
+include ':libraries:moduleB'
 include ':libraries:moduleC'
 include ':mytestapplication'
 include ':tests:custom_test_runner'

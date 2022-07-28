@@ -68,7 +68,7 @@ apply from: "$rootDir/gradle/android-test.gradle"
 dependencies {
     androidTestImplementation project(path: ':tests:custom_test_runner')
     implementation project(path: ':app:moduleA')
-    implementation project(path: ':app:moduleB')
+    implementation project(path: ':libraries:moduleB')
 
     implementation "androidx.core:core-ktx:$ktx_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
