@@ -6,16 +6,4 @@
     <string name="three">Three</string>
     <string name="mod_b">Mod B</string>
     <string name="order">Order</string>
-    <!-- Instructions on Verify Identity screen; %s replaced with contact name -->
-    <string name="verify_identity_tip_self_multiple_device">
-        To verify that messages and calls with %s are end-to-end encrypted, scan this code on their
-        phone as well as on all devices linked to your account. You can also compare the number above
-        instead. &lt;a href=\"%2$s\"&gt; Learn more&lt;/a&gt;
-    </string>
-    <!-- [PLUOT][SYSM] Modal shown In the business contact info if the user taps to learn more about how messages are secured, for verified and unverified business accounts + not e2e + using BSP -->
-    <!-- [PLUOT][SYSM] both placeholders are the same business name -->
-    <string name="contact_info_security_modal_bsp">WhatsApp secures messages and calls while they\'re being delivered to and from the companies that store and manage this chat for %1s. Contact %1s for more information on their privacy practices.</string>
-    <!-- [PLUOT][SYSM] Modal shown In the business contact info if the user taps to learn more about  how messages are secured, for verified and unverified business accounts + not e2e + using BSP -->
-    <!-- both placeholders are the same business name -->
-    <string name="contact_info_security_modal_fb_and_bsp">WhatsApp secures messages and calls while they\'re being delivered to and from Facebook, where this chat is stored and managed for %1s. Contact %1s for more information on their privacy practices.</string>
 </resources>

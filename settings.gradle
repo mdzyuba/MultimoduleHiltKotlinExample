@@ -13,11 +13,11 @@ dependencyResolutionManagement {
     }
 }
 include ':app:common_resources'
-include ':app:largetests'
 include ':app:moduleA'
 include ':app:moduleB'
 include ':app:moduleC'
 include ':app:sampleapp'
 include ':lintchecks'
 include ':mytestapplication'
+include ':tests:custom_test_runner'
 rootProject.name = "MultimoduleHiltKotlinExample"

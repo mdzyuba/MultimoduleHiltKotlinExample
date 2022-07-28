@@ -16,7 +16,7 @@ android {
         versionCode rootProject.ext.versionCode
         versionName rootProject.ext.versionName
 
-        testInstrumentationRunner "com.example.largetests.CustomTestRunner"
+        testInstrumentationRunner "CustomTestRunner"
     }
 
     buildTypes {
@@ -66,7 +66,7 @@ apply from: "$rootDir/gradle/android-hilt.gradle"
 apply from: "$rootDir/gradle/android-test.gradle"
 
 dependencies {
-    androidTestImplementation project(path: ':app:largetests')
+    androidTestImplementation project(path: ':tests:custom_test_runner')
     implementation project(path: ':app:moduleA')
     implementation project(path: ':app:moduleB')
 

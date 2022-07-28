@@ -51,10 +51,5 @@ class MainActivity : AppCompatActivity() {
             intent.`package`= application.packageName
             startActivity(intent)
         }
-        val s = getString(R.string.verify_identity_tip_self_multiple_device, "AAAA", "BBBB")
-        Log.d("test", "verify_identity_tip_self_multiple_device: $s")
-
-        val b = getString(R.string.contact_info_security_modal_bsp, "AAAA", "BBBB")
-        Log.d("test", "contact_info_security_modal_bsp: $b")
     }
 }

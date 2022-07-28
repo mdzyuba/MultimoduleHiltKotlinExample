@@ -17,7 +17,7 @@ android {
 
         multiDexEnabled true
 
-        testInstrumentationRunner "com.example.largetests.CustomTestRunner"
+        testInstrumentationRunner "CustomTestRunner"
     }
 
     buildTypes {
@@ -51,9 +51,9 @@ apply from: "$rootDir/gradle/android-lib.gradle"
 
 dependencies {
     implementation project(':app:common_resources')
+    androidTestImplementation project(path: ':tests:custom_test_runner')
 
     // provides a test runner
-    androidTestImplementation project(path: ':app:largetests')
 
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation "androidx.core:core-ktx:$ktx_version"

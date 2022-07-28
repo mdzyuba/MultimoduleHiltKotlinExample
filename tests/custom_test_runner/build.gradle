@@ -17,7 +17,7 @@ android {
 
         multiDexEnabled true
 
-        testInstrumentationRunner "com.example.largetests.CustomTestRunner"
+        testInstrumentationRunner "CustomTestRunner"
     }
 
     buildTypes {
