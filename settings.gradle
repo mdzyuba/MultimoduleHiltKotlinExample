@@ -1,9 +1,23 @@
-include ':app:moduleC'
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+    }
+}
 include ':app:common_resources'
-include ':lintchecks'
-include ':app:moduleB'
-include ':mytestapplication'
 include ':app:largetests'
 include ':app:moduleA'
+include ':app:moduleB'
+include ':app:moduleC'
 include ':app:sampleapp'
+include ':lintchecks'
+include ':mytestapplication'
 rootProject.name = "MultimoduleHiltKotlinExample"

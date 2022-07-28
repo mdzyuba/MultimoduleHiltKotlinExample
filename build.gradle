@@ -2,7 +2,7 @@
 buildscript {
     ext {
         kotlin_version = "1.4.30"
-        hilt_version = "2.33-beta"
+        hilt_version = "2.42"
         junit_version = "4.13.1"
         versionGuava = '28.1-jre'
         lintVersion = '27.1.2'
@@ -17,13 +17,7 @@ buildscript {
         androidxTestExtJunitVersion = "1.1.2"
         multidex_version = "2.0.1"
     }
-    repositories {
-        google()
-        jcenter()
-    }
     dependencies {
-        classpath "com.android.tools.build:gradle:4.1.2"
-        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hilt_version"
 
         // NOTE: Do not place your application dependencies here; they belong
@@ -31,12 +25,13 @@ buildscript {
     }
 }
 
+plugins {
+    id 'com.android.application' version '7.1.2' apply false
+    id 'com.android.library' version '7.1.2' apply false
+    id 'org.jetbrains.kotlin.android' version '1.6.21' apply false
+}
+
 allprojects {
-    repositories {
-        google()
-        jcenter()
-        mavenCentral()
-    }
 }
 
 task clean(type: Delete) {
