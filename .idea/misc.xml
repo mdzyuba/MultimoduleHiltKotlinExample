@@ -13,7 +13,10 @@
         <entry key="libraries/moduleB/src/main/res/layout/activity_module_b_main.xml" value="0.67" />
         <entry key="libraries/order/src/main/res/layout/activity_order.xml" value="0.2" />
         <entry key="libraries/order/src/main/res/layout/activity_order_confirmation.xml" value="0.1" />
+        <entry key="libraries/product/src/main/res/layout/activity_product_details.xml" value="0.25" />
         <entry key="libraries/service/src/main/res/layout/activity_order_confirmation.xml" value="0.1" />
+        <entry key="libraries/shipping/src/main/res/layout/activity_contact_info.xml" value="0.33" />
+        <entry key="libraries/shipping/src/main/res/layout/activity_shipping.xml" value="0.5" />
         <entry key="libraries/shop/src/main/res/layout/activity_order.xml" value="0.25" />
       </map>
     </option>

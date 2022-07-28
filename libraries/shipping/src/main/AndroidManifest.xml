@@ -2,4 +2,13 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.shipping">
 
+    <application>
+        <activity
+            android:name=".ContactInfoActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ShippingActivity"
+            android:exported="false" />
+    </application>
+
 </manifest>

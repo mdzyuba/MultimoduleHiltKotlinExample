@@ -10,4 +10,6 @@ apply from: "$rootDir/gradle/android-lib.gradle"
 dependencies {
     implementation project(':libraries:common_resources')
     implementation project(':libraries:shop')
+
+    androidTestImplementation project(path: ':tests:custom_test_runner')
 }

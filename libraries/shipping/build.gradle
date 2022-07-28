@@ -10,4 +10,15 @@ apply from: "$rootDir/gradle/android-lib.gradle"
 dependencies {
     implementation project(':libraries:common_resources')
     implementation project(':libraries:shop')
+
+    // A workaround for
+    // error: [Dagger/MissingBinding] com.example.order.model.Product cannot be provided
+    // without an @Provides-annotated method.
+    androidTestImplementation project(':libraries:product')
+
+    // This option does not work in this particular example, however it works in others:
+    // NullPointerException: Attempt to invoke interface method 'void androidx.appcompat.widget.DecorContentParent.setWindowCallback(android.view.Window$Callback)' on a null object reference
+    // androidTestImplementation project(':app:sampleapp')
+
+    androidTestImplementation project(path: ':tests:custom_test_runner')
 }

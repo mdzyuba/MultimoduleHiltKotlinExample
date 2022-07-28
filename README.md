@@ -5,21 +5,20 @@ This is a toy project. It is created to experiment with Dagger/Hilt and Gradle.
 
 ## Gradle Modules
 
-    Root project 'MultimoduleHiltKotlinExample'
-    +--- Project ':app'
-    |    \--- Project ':app:sampleapp' - the main app module
-    +--- Project ':libraries:common_resources'
-    +--- Project ':libraries:order' - a library module
-    +--- Project ':libraries:moduleB' - a library module
-    +--- Project ':libraries:moduleC'
-    +--- Project ':tools:lintchecks'
-    +--- Project ':tests:custom_test_runner' - a test runner for large tests.
-    +--- Project ':mytestapplication' - is another application project created to experiment with moving androidTests there.
-
-Note, for the demo purposes, the project has multiple flavors and build types:
-
-- commonProductFlavors: basic, premium
-- commonBuildTypes: debug, beta, release
+```
+Root project 'MultimoduleHiltKotlinExample'
++--- Project ':app'
+|    \--- Project ':app:sampleapp' - the main app module
++--- Project ':libraries'
+|    +--- Project ':libraries:common_resources'
+|    +--- Project ':libraries:product'
+|    +--- Project ':libraries:shipping'
+|    \--- Project ':libraries:shop'
++--- Project ':tests'
+|    \--- Project ':tests:custom_test_runner'
+\--- Project ':tools'
+     \--- Project ':tools:lintchecks'
+```
 
 ## Android Espresso Tests
 
@@ -62,6 +61,5 @@ or to run tests for all flavors:
 Before running these tests, please start an Android emulator or connect an Android device.
 
 ./gradlew connectedBasicDebugAndroidTest
-
 
 
