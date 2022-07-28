@@ -1,15 +1,13 @@
 package com.example.sampleapp
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import com.example.modulea.model.Foo
+import androidx.appcompat.app.AppCompatActivity
 import com.example.modulea.model.Order
 import com.example.moduleb.ModuleBMainActivity
-import com.example.sampleapp.repository.Store
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 

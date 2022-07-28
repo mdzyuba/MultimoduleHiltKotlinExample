@@ -3,7 +3,8 @@
     package="com.example.moduleb">
 
     <application android:theme="@style/Theme.MultimoduleHiltKotlinExample">
-        <activity android:name=".OrderConfirmationActivity">
+        <activity android:name=".OrderConfirmationActivity"
+            android:exported="false">
             <intent-filter>
                 <action android:name="com.example.sampleapp.order.CONFIRMATION" />
                 <category android:name="android.intent.category.DEFAULT" />

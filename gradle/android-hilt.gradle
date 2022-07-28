@@ -7,9 +7,6 @@ android {
 }
 
 hilt {
-    // This is only required for Android Gradle Plugin version lower than 4.2. (https://developer.android.com/training/dependency-injection/hilt-testing)
-    enableTransformForLocalTests = true
-
     // Note: Lint breaks when the flag is on. Please see https://github.com/google/dagger/issues/2378.
     enableExperimentalClasspathAggregation = true
 
@@ -27,15 +24,10 @@ dependencies {
     kapt "com.google.dagger:hilt-android-compiler:$hilt_version"
 
     // Hilt test
-    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
-    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
-
     testImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
     kaptTest "com.google.dagger:hilt-android-compiler:$hilt_version"
 
-//    implementation (name: "artifact", ext: "aar")
-//    kapt (name: "artifact", ext: "aar")
-//    androidTestImplementation (name: "artifact", ext: "aar")
-//    kaptAndroidTest (name: "artifact", ext: "aar")
+    androidTestImplementation "com.google.dagger:hilt-android-testing:$hilt_version"
+    kaptAndroidTest "com.google.dagger:hilt-android-compiler:$hilt_version"
 }
 

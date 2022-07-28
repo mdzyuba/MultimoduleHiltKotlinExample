@@ -1,6 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="CompilerConfiguration">
-    <bytecodeTargetLevel target="1.8" />
+    <bytecodeTargetLevel target="1.8">
+      <module name="MultimoduleHiltKotlinExample.app.common_resources" target="11" />
+      <module name="MultimoduleHiltKotlinExample.app.largetests" target="11" />
+      <module name="MultimoduleHiltKotlinExample.app.moduleA" target="11" />
+      <module name="MultimoduleHiltKotlinExample.app.moduleB" target="11" />
+      <module name="MultimoduleHiltKotlinExample.app.moduleC" target="11" />
+      <module name="MultimoduleHiltKotlinExample.app.sampleapp" target="11" />
+      <module name="MultimoduleHiltKotlinExample.mytestapplication" target="11" />
+    </bytecodeTargetLevel>
   </component>
 </project>
