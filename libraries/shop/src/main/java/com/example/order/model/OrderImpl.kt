@@ -1,12 +1,14 @@
 package com.example.order.model
 
-class MailOrder: Order {
+import javax.inject.Inject
+
+class OrderImpl @Inject constructor(val addressProvider: AddressProvider): Order {
     override fun price(): Int {
         return 4
     }
 
     override fun address(): String {
-        return "Mailing address"
+        return addressProvider.getAddress()
     }
 
     override fun priority(): Int {

@@ -62,6 +62,7 @@ apply from: "$rootDir/gradle/android-test.gradle"
 
 dependencies {
     implementation project(path: ':libraries:shop')
+    implementation project(path: ':libraries:shipping')
     implementation "androidx.multidex:multidex:$multidex_version"
     androidTestImplementation project(path: ':tests:custom_test_runner')
 

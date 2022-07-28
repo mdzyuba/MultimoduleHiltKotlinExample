@@ -14,6 +14,7 @@
         <entry key="libraries/order/src/main/res/layout/activity_order.xml" value="0.2" />
         <entry key="libraries/order/src/main/res/layout/activity_order_confirmation.xml" value="0.1" />
         <entry key="libraries/service/src/main/res/layout/activity_order_confirmation.xml" value="0.1" />
+        <entry key="libraries/shop/src/main/res/layout/activity_order.xml" value="0.25" />
       </map>
     </option>
   </component>

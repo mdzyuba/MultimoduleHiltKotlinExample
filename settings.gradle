@@ -19,3 +19,4 @@ include ':tests:custom_test_runner'
 include ':tools:lintchecks'
 rootProject.name = "MultimoduleHiltKotlinExample"
 include ':libraries:product'
+include ':libraries:shipping'
