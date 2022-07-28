@@ -9,9 +9,10 @@
       <module name="MultimoduleHiltKotlinExample.app.moduleC" target="11" />
       <module name="MultimoduleHiltKotlinExample.app.sampleapp" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.common_resources" target="11" />
-      <module name="MultimoduleHiltKotlinExample.libraries.moduleB" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.moduleC" target="11" />
-      <module name="MultimoduleHiltKotlinExample.libraries.order" target="11" />
+      <module name="MultimoduleHiltKotlinExample.libraries.product" target="11" />
+      <module name="MultimoduleHiltKotlinExample.libraries.service" target="11" />
+      <module name="MultimoduleHiltKotlinExample.libraries.shop" target="11" />
       <module name="MultimoduleHiltKotlinExample.mytestapplication" target="11" />
       <module name="MultimoduleHiltKotlinExample.tests.custom_test_runner" target="11" />
     </bytecodeTargetLevel>

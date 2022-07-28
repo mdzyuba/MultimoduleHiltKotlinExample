@@ -38,26 +38,11 @@ class MainActivityTest {
         assertNotNull(order)
     }
 
-    @Test
-    fun clickButtons() {
-        Espresso.onView(withId(R.id.button1)).perform(ViewActions.click())
-        Espresso.onView(withId(R.id.textView))
-            .check(ViewAssertions.matches(ViewMatchers.withText("One")))
-        Espresso.onView(withId(R.id.button2)).perform(ViewActions.click())
-        Espresso.onView(withId(R.id.textView))
-            .check(ViewAssertions.matches(ViewMatchers.withText("Two")))
-        Espresso.onView(withId(R.id.button3)).perform(ViewActions.click())
-        Espresso.onView(withId(R.id.textView))
-            .check(ViewAssertions.matches(ViewMatchers.withText("Three")))
-    }
-
     /**
      * This is an example of testing navigation between activities from different modules.
      */
     @Test
     fun checkNavigationAcrossActivities() {
-        Espresso.onView(ViewMatchers.withText(R.string.multimodule_app_hello_world))
-            .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(withId(R.id.button_order)).perform(ViewActions.click())
         // Check Order Details activity is displayed
         Espresso.onView(ViewMatchers.withText(R.string.order_details))
@@ -68,7 +53,7 @@ class MainActivityTest {
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
         Espresso.onView(withId(R.id.button_home)).perform(ViewActions.click())
         // Check the navigation back to the Home activity
-        Espresso.onView(ViewMatchers.withText(R.string.multimodule_app_hello_world))
+        Espresso.onView(ViewMatchers.withId(R.id.button_order))
             .check(ViewAssertions.matches(ViewMatchers.isDisplayed()))
     }
 }

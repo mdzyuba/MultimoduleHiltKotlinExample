@@ -14,10 +14,8 @@ dependencyResolutionManagement {
 }
 include ':app:sampleapp'
 include ':libraries:common_resources'
-include ':libraries:order'
-include ':libraries:moduleB'
-include ':libraries:moduleC'
-include ':mytestapplication'
+include ':libraries:shop'
 include ':tests:custom_test_runner'
 include ':tools:lintchecks'
 rootProject.name = "MultimoduleHiltKotlinExample"
+include ':libraries:product'

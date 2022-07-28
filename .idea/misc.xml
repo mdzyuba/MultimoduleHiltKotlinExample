@@ -10,6 +10,10 @@
       <map>
         <entry key="app/sampleapp/src/main/res/layout/activity_main.xml" value="0.2" />
         <entry key="libraries/moduleA/src/main/res/drawable-v24/ic_launcher_foreground.xml" value="0.2055" />
+        <entry key="libraries/moduleB/src/main/res/layout/activity_module_b_main.xml" value="0.67" />
+        <entry key="libraries/order/src/main/res/layout/activity_order.xml" value="0.2" />
+        <entry key="libraries/order/src/main/res/layout/activity_order_confirmation.xml" value="0.1" />
+        <entry key="libraries/service/src/main/res/layout/activity_order_confirmation.xml" value="0.1" />
       </map>
     </option>
   </component>

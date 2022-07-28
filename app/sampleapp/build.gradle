@@ -61,9 +61,7 @@ apply from: "$rootDir/gradle/android-hilt.gradle"
 apply from: "$rootDir/gradle/android-test.gradle"
 
 dependencies {
-    implementation project(path: ':libraries:order')
-    implementation project(path: ':libraries:moduleB')
-
+    implementation project(path: ':libraries:shop')
     implementation "androidx.multidex:multidex:$multidex_version"
     androidTestImplementation project(path: ':tests:custom_test_runner')
 
