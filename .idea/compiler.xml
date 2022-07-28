@@ -9,6 +9,7 @@
       <module name="MultimoduleHiltKotlinExample.app.moduleC" target="11" />
       <module name="MultimoduleHiltKotlinExample.app.sampleapp" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.common_resources" target="11" />
+      <module name="MultimoduleHiltKotlinExample.libraries.moduleA" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.moduleB" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.moduleC" target="11" />
       <module name="MultimoduleHiltKotlinExample.mytestapplication" target="11" />

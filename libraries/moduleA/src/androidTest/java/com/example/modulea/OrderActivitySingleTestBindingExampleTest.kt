@@ -1,34 +1,16 @@
 package com.example.modulea
 
 import androidx.test.espresso.Espresso
-import androidx.test.espresso.action.ViewActions
 import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.intent.Intents
-import androidx.test.espresso.intent.matcher.IntentMatchers
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.modulea.hilt.FakeOrderModule
-import com.example.modulea.hilt.OrderModule
-import com.example.modulea.model.Bar
-import com.example.modulea.model.FakeOrder
-import com.example.modulea.model.Foo
 import com.example.modulea.model.Order
-import com.example.modulea.remote.GitHubService
-import dagger.Module
-import dagger.Provides
-import dagger.hilt.InstallIn
 import dagger.hilt.android.testing.HiltAndroidRule
 import dagger.hilt.android.testing.HiltAndroidTest
-import dagger.hilt.android.testing.UninstallModules
-import dagger.hilt.components.SingletonComponent
-import okhttp3.OkHttpClient
 import org.junit.*
 import org.junit.runner.RunWith
-import retrofit2.Retrofit
-import retrofit2.converter.gson.GsonConverterFactory
-import javax.inject.Inject
-import javax.inject.Singleton
 
 // Note: combining Fake modules and unbinding in the same Gradle module does not work.
 // @UninstallModules(OrderModule::class, FakeOrderModule::class)

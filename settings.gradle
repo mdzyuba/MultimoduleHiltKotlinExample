@@ -12,9 +12,9 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
-include ':app:moduleA'
 include ':app:sampleapp'
 include ':libraries:common_resources'
+include ':libraries:moduleA'
 include ':libraries:moduleB'
 include ':libraries:moduleC'
 include ':mytestapplication'

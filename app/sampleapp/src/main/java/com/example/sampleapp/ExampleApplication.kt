@@ -1,6 +1,5 @@
 package com.example.sampleapp
 
-import android.app.Application
 import androidx.multidex.MultiDexApplication
 import com.example.modulea.AppInit
 import com.facebook.stetho.Stetho
