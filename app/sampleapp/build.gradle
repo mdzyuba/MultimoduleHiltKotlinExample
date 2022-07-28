@@ -61,18 +61,17 @@ apply from: "$rootDir/gradle/android-hilt.gradle"
 apply from: "$rootDir/gradle/android-test.gradle"
 
 dependencies {
-    implementation project(path: ':libraries:shop')
     implementation project(path: ':libraries:shipping')
-    implementation "androidx.multidex:multidex:$multidex_version"
-    androidTestImplementation project(path: ':tests:custom_test_runner')
+    implementation project(path: ':libraries:shop')
+    implementation project(path: ':libraries:product')
 
-    // provides a test runner
-
-    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
-    implementation "androidx.core:core-ktx:$ktx_version"
     implementation "androidx.appcompat:appcompat:$appcompat_version"
-    implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
+    implementation "androidx.core:core-ktx:$ktx_version"
+    implementation "androidx.multidex:multidex:$multidex_version"
+    implementation "com.google.android.material:material:$material_version"
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    androidTestImplementation project(path: ':tests:custom_test_runner')
 }
 
 tasks.withType(JavaCompile) {

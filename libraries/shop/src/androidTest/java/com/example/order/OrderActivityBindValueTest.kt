@@ -44,6 +44,10 @@ class OrderActivityBindValueTest {
     }
 
     class AnotherFakeOrder: Order {
+        override fun product(): String {
+            return "Tea"
+        }
+
         override fun price(): Int {
             return 1
         }

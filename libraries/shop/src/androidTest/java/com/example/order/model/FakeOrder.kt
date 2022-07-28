@@ -1,6 +1,9 @@
 package com.example.order.model
 
 class FakeOrder: Order {
+    override fun product(): String {
+        return "Coffee"
+    }
 
     override fun price(): Int {
         return 1

@@ -24,6 +24,10 @@ class OrderActivitySingleTestBindingExampleTest {
     var activityRule = ActivityScenarioRule(OrderActivity::class.java)
 
     class AnotherFakeOrder() : Order {
+        override fun product(): String {
+            return "Juice"
+        }
+
         override fun price(): Int {
             return 1
         }
