@@ -6,8 +6,6 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Button
 import android.widget.TextView
-import com.example.order.model.Bar
-import com.example.order.model.Foo
 import com.example.order.model.Order
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
@@ -17,12 +15,6 @@ class OrderActivity : AppCompatActivity() {
 
     @Inject
     lateinit var order: Order
-
-    @Inject
-    lateinit var bar: Bar
-
-    @Inject
-    lateinit var foo: Foo
 
     lateinit var addressTextView: TextView
 
@@ -49,8 +41,6 @@ class OrderActivity : AppCompatActivity() {
             finish()
         }
 
-        foo.xyz()
-        bar.doIt()
         Log.d("OrderActivity", "order: ${order.address()}")
     }
 

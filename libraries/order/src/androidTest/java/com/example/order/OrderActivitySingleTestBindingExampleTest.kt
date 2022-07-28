@@ -23,44 +23,6 @@ class OrderActivitySingleTestBindingExampleTest {
     @get:Rule(order = 1)
     var activityRule = ActivityScenarioRule(OrderActivity::class.java)
 
-//    @Inject
-//    lateinit var order: Order
-
-//    @Module
-//    @InstallIn(SingletonComponent::class)
-//    object TestModule {
-//        @Provides
-//        fun provideOrder() : Order {
-//            return AnotherFakeOrder()
-//        }
-//
-//        // TODO: figure out a better approach. This is an exact copy.
-//
-//        @Provides
-//        fun provideFoo() : Foo {
-//            return Foo(1)
-//        }
-//
-//        @Provides
-//        fun provideBar(): Bar {
-//            return Bar()
-//        }
-//
-//        @Provides
-//        @Singleton
-//        fun provideRetrofit(okHttpClient: OkHttpClient): Retrofit =
-//            Retrofit.Builder()
-//                .baseUrl("https://api.github.com")
-//                .client(okHttpClient)
-//                .addConverterFactory(GsonConverterFactory.create())
-//                .build()
-//
-//        @Provides
-//        @Singleton
-//        fun provideGitHubService(retrofit: Retrofit): GitHubService =
-//            retrofit.create(GitHubService::class.java)
-//    }
-
     class AnotherFakeOrder() : Order {
         override fun price(): Int {
             return 1
