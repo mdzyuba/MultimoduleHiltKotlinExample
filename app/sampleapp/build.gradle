@@ -74,8 +74,6 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
-
-    implementation 'com.facebook.stetho:stetho:1.6.0'
 }
 
 tasks.withType(JavaCompile) {
