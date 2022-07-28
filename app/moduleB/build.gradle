@@ -40,7 +40,7 @@ apply from: "$rootDir/gradle/android-test.gradle"
 apply from: "$rootDir/gradle/android-lib.gradle"
 
 dependencies {
-    implementation project(':app:common_resources')
+    implementation project(':libraries:common_resources')
     androidTestImplementation project(path: ':tests:custom_test_runner')
 
     // provides a test runner

@@ -7,14 +7,14 @@ This is a toy project. It is created to experiment with Dagger/Hilt and Gradle.
 
     Root project 'MultimoduleHiltKotlinExample'
     +--- Project ':app'
-    |    +--- Project ':app:common_resources'
     |    +--- Project ':app:moduleA' - a library module
     |    +--- Project ':app:moduleB' - a library module
-    |    +--- Project ':app:moduleC'
     |    \--- Project ':app:sampleapp' - the main module
-    +--- Project ':lintchecks'
-    +--- Project ':mytestapplication' - is another application project created to experiment with moving androidTests there.
+    +--- Project ':libraries:common_resources'
+    +--- Project ':libraries:moduleC'
+    +--- Project ':tools:lintchecks'
     +--- Project ':tests:custom_test_runner' - a test runner for large tests.
+    +--- Project ':mytestapplication' - is another application project created to experiment with moving androidTests there.
 
 Note, for the demo purposes, the project has multiple flavors and build types:
 
