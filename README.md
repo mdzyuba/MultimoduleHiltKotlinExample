@@ -7,10 +7,10 @@ This is a toy project. It is created to experiment with Dagger/Hilt and Gradle.
 
     Root project 'MultimoduleHiltKotlinExample'
     +--- Project ':app'
-    |    +--- Project ':app:moduleA' - a library module
-    |    +--- Project ':app:moduleB' - a library module
-    |    \--- Project ':app:sampleapp' - the main module
+    |    \--- Project ':app:sampleapp' - the main app module
     +--- Project ':libraries:common_resources'
+    +--- Project ':libraries:order' - a library module
+    +--- Project ':libraries:moduleB' - a library module
     +--- Project ':libraries:moduleC'
     +--- Project ':tools:lintchecks'
     +--- Project ':tests:custom_test_runner' - a test runner for large tests.

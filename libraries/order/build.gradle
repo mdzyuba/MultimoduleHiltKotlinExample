@@ -1,5 +1,5 @@
 plugins {
-    id 'com.android.application'
+    id 'com.android.library'
     id 'kotlin-android'
     id 'kotlin-kapt'
     id 'dagger.hilt.android.plugin'
@@ -10,7 +10,6 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
 
     defaultConfig {
-        applicationId "com.example.sampleapp"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode rootProject.ext.versionCode
@@ -21,27 +20,9 @@ android {
         testInstrumentationRunner "com.example.largetests.CustomTestRunner"
     }
 
-    flavorDimensions rootProject.ext.commonFlavorDimensions
-    productFlavors rootProject.ext.commonProductFlavors
-    productFlavors {
-        basic {
-            applicationId 'com.example.sampleapp'
-        }
-        premium {
-            applicationId 'com.example.sampleapp.premium'
-        }
-    }
     buildTypes {
-        debug {
-            minifyEnabled false
-        }
-        beta {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
-            matchingFallbacks = ['release']
-        }
         release {
-            minifyEnabled true
+            minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
     }
@@ -52,19 +33,24 @@ android {
     kotlinOptions {
         jvmTarget = '1.8'
     }
-    lintOptions {
-        checkReleaseBuilds false
+
+    testOptions.unitTests {
+        includeAndroidResources = true
+
+        all {
+            testLogging {
+                events 'passed', 'skipped', 'failed', 'standardOut', 'standardError'
+            }
+        }
     }
 }
 
 apply from: "$rootDir/gradle/android-hilt.gradle"
 apply from: "$rootDir/gradle/android-test.gradle"
+apply from: "$rootDir/gradle/android-lib.gradle"
 
 dependencies {
-    implementation project(path: ':libraries:order')
-    implementation project(path: ':libraries:moduleB')
-
-    implementation "androidx.multidex:multidex:$multidex_version"
+    implementation project(':libraries:common_resources')
     androidTestImplementation project(path: ':tests:custom_test_runner')
 
     // provides a test runner
@@ -74,14 +60,9 @@ dependencies {
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "com.google.android.material:material:$material_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"
-}
 
-tasks.withType(JavaCompile) {
-    configure(options) {
-        debug = true
-        listFiles = true
-        verbose = true
-        options.compilerArgs << '-verbose' << '-XprintProcessorInfo'
-        // options.compilerArgs << '-Xlint:deprecation' << '-Xlint:unchecked' // examples
-    }
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation "com.squareup.okhttp3:okhttp:4.9.0"
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation "com.google.code.gson:gson:$gson_version"
 }

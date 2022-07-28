@@ -7,7 +7,7 @@ import androidx.test.espresso.assertion.ViewAssertions
 import androidx.test.espresso.matcher.ViewMatchers
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.ext.junit.runners.AndroidJUnit4
-import com.example.modulea.model.Order
+import com.example.order.model.Order
 import com.example.sampleapp.MainActivity
 import com.example.sampleapp.R
 import dagger.hilt.android.testing.HiltAndroidRule
