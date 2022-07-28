@@ -8,6 +8,7 @@
       <module name="MultimoduleHiltKotlinExample.app.moduleB" target="11" />
       <module name="MultimoduleHiltKotlinExample.app.moduleC" target="11" />
       <module name="MultimoduleHiltKotlinExample.app.sampleapp" target="11" />
+      <module name="MultimoduleHiltKotlinExample.libraries.moduleC" target="11" />
       <module name="MultimoduleHiltKotlinExample.mytestapplication" target="11" />
       <module name="MultimoduleHiltKotlinExample.tests.custom_test_runner" target="11" />
     </bytecodeTargetLevel>
