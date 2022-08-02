@@ -9,5 +9,8 @@ apply from: "$rootDir/gradle/android-lib.gradle"
 
 dependencies {
     implementation project(':libraries:common_resources')
+
+    androidTestApi project(':libraries:product')
+
     androidTestImplementation project(path: ':tests:custom_test_runner')
 }
