@@ -13,7 +13,8 @@ Root project 'MultimoduleHiltKotlinExample'
 |    +--- Project ':libraries:common_resources'
 |    +--- Project ':libraries:product'
 |    +--- Project ':libraries:shipping'
-|    \--- Project ':libraries:shop'
+|    +--- Project ':libraries:shop'
+|    \--- Project ':libraries:shop_api'
 +--- Project ':tests'
 |    \--- Project ':tests:custom_test_runner'
 \--- Project ':tools'
@@ -27,18 +28,6 @@ In the main app module, Android Espresso tests can verify navigation across acti
 
 ## Hilt
 The Hilt is enabled in all modules.
-
-### enableExperimentalClasspathAggregation flag
-
-The flag is enabled in this project.
-
-The project has a copy of the same setup as described in https://github.com/google/dagger/issues/1991 with 2.29.1-alpha.
-It is done to reproduce the issue when the flag is off.
-
-// This will return cannot access OkHttpClient
-// enableExperimentalClasspathAggregation = false
-
-However, when the flag is on, the lint run fails due to https://github.com/google/dagger/issues/2378. 
 
 ## How to Build
 
