@@ -2,7 +2,8 @@ package com.example.order.model
 
 import javax.inject.Inject
 
-class OrderImpl @Inject constructor(val addressProvider: AddressProvider, val product: Product): Order {
+class OrderImpl @Inject constructor(val addressProvider: AddressProvider, val product: Product):
+    Order {
     override fun product(): String {
         return product.getName()
     }

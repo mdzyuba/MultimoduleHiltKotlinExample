@@ -61,9 +61,8 @@ apply from: "$rootDir/gradle/android-hilt.gradle"
 apply from: "$rootDir/gradle/android-test.gradle"
 
 dependencies {
-    implementation project(path: ':libraries:shipping')
-    implementation project(path: ':libraries:shop')
-    implementation project(path: ':libraries:product')
+
+    implementation project(':libraries:shop')
 
     implementation "androidx.appcompat:appcompat:$appcompat_version"
     implementation "androidx.constraintlayout:constraintlayout:$constraintlayout_version"

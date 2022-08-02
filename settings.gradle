@@ -12,11 +12,12 @@ dependencyResolutionManagement {
         mavenCentral()
     }
 }
+rootProject.name = "MultimoduleHiltKotlinExample"
 include ':app:sampleapp'
 include ':libraries:common_resources'
-include ':libraries:shop'
-include ':tests:custom_test_runner'
-include ':tools:lintchecks'
-rootProject.name = "MultimoduleHiltKotlinExample"
 include ':libraries:product'
 include ':libraries:shipping'
+include ':libraries:shop'
+include ':libraries:shop_api'
+include ':tests:custom_test_runner'
+include ':tools:lintchecks'

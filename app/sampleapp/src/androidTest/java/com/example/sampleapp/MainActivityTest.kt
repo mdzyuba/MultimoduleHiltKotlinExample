@@ -29,7 +29,7 @@ class MainActivityTest {
     var activityRule = ActivityScenarioRule(MainActivity::class.java)
 
     @Inject
-    lateinit var order: Order
+    lateinit var order: com.example.order.model.Order
 
     @Before
     fun setup() {

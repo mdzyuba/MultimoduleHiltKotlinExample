@@ -4,7 +4,6 @@ import com.example.order.model.OrderImpl
 import com.example.order.model.Order
 import dagger.Binds
 import dagger.Module
-import dagger.Provides
 import dagger.hilt.InstallIn
 import dagger.hilt.components.SingletonComponent
 

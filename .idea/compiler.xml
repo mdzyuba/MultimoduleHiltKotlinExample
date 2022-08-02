@@ -14,6 +14,7 @@
       <module name="MultimoduleHiltKotlinExample.libraries.service" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.shipping" target="11" />
       <module name="MultimoduleHiltKotlinExample.libraries.shop" target="11" />
+      <module name="MultimoduleHiltKotlinExample.libraries.shop_api" target="11" />
       <module name="MultimoduleHiltKotlinExample.mytestapplication" target="11" />
       <module name="MultimoduleHiltKotlinExample.tests.custom_test_runner" target="11" />
     </bytecodeTargetLevel>
